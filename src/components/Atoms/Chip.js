@@ -1,5 +1,5 @@
 import React from 'react';
-import '.Chip.css';
+import './Chip.css';
 
 const Chip = ({onClick, value}) => {
   return (
