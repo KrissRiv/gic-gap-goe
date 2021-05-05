@@ -5,6 +5,10 @@ import Header from "./Header";
 describe('Test Header Component', () => {
   it('should have a header tag with gic GAP goe!', async () => {
     const wrapper = await shallow(<Header />);
-    expect(wrapper.find("h1").text()).toEqual("gic GAP goe");
+    expect(wrapper.find("h1").text()).toEqual("gic GAP goe Game");
+  });
+  it('should have a logo image', async () => {
+    const wrapper = await shallow(<Header />);
+    expect(wrapper.find("img")).toBeTruthy();
   });
 });
