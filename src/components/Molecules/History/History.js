@@ -5,8 +5,8 @@ class History extends Component {
   render() {
     return (
       <section className="history">
-        <div>{this.props.status}</div>
-        <ol>{this.props.moves}</ol>
+        <div className="history-status">{this.props.status}</div>
+        <ol className="history-list">{this.props.moves}</ol>
       </section>
     );
   }
