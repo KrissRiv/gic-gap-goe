@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Chip = (onClick, value) => {
+const Chip = ({onClick, value}) => {
   return (
     <button className="chip" onClick={onClick}>
       {value}
