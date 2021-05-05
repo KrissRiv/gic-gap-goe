@@ -13,4 +13,20 @@ describe('Test History Component', () => {
         wrapper.setProps({ status: 'Change Prop' });
         expect(wrapper.instance().props.status).toEqual('Change Prop');
     });
+    it('Should render status game for player X', () => {
+        const props = {
+            status: 'Next player: X'
+        }
+        const wrapper = shallow(<History {...props} />);
+        const firstPlayer = wrapper.find('.history').children().first().text();
+        expect(firstPlayer).toEqual('Next player: X');
+    });
+    it('Should render status game for player O', () => {
+        const props = {
+            status: 'Next player: O'
+        }
+        const wrapper = shallow(<History {...props} />);
+        const firstPlayer = wrapper.find('.history').children().first().text();
+        expect(firstPlayer).toEqual('Next player: O');
+    });
 });
