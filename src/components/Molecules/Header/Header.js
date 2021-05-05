@@ -3,8 +3,11 @@ import './Header.css';
 
 class Header extends Component {
   render () {
-    return (<>
-    </>);
+    return (
+      <header className="header">
+        <h1>gic GAP goe</h1>
+      </header>
+    );
   }
 }
 
