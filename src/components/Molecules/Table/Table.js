@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Chip from '../../Atoms/Chip';
+import './Table.css';
 
 class Table extends Component {
   renderChip(i) {
@@ -13,23 +14,23 @@ class Table extends Component {
 
   render() {
     return (
-      <div>
-        <div className="board-row">
+      <section className="table">
+        <div className="table-row">
           {this.renderChip(0)}
           {this.renderChip(1)}
           {this.renderChip(2)}
         </div>
-        <div className="board-row">
+        <div className="table-row">
           {this.renderChip(3)}
           {this.renderChip(4)}
           {this.renderChip(5)}
         </div>
-        <div className="board-row">
+        <div className="table-row">
           {this.renderChip(6)}
           {this.renderChip(7)}
           {this.renderChip(8)}
         </div>
-      </div>
+      </section>
     );
   }
 }
