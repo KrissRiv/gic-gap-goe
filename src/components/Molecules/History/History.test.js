@@ -6,11 +6,11 @@ describe('Test History Component', () => {
     it('Should render History', () => {
         shallow(<History />);
     });
-    it('allows us to set props', () => {
+    it('Should render with set props', () => {
         const wrapper = shallow(<History status='Status Prop' />);
-        expect(wrapper.props().status).toEqual('Status Prop');
+        expect(wrapper.instance().props.status).toEqual('Status Prop');
         
         wrapper.setProps({ status: 'Change Prop' });
-        expect(wrapper.props().status).toEqual('Change Prop');
+        expect(wrapper.instance().props.status).toEqual('Change Prop');
     });
 });
